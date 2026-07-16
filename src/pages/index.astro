@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Stoney Point Enterprises";
+const description =
+  "Stoney Point Enterprises develops practical data, automation, and artificial-intelligence solutions that connect information from complex systems and turn it into useful, explainable insights.";
+---
+
+<BaseLayout title={title} description={description} current="home">
+  <section class="hero section-dark">
+    <div class="container">
+      <p class="eyebrow">Applied AI &middot; Data &amp; Automation</p>
+      <h1>Practical intelligence for complex systems.</h1>
+      <p class="lede">
+        Stoney Point Enterprises develops practical data, automation, and
+        artificial-intelligence solutions that connect information from
+        complex systems and turn it into useful, explainable insights.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/projects/residentai-home-energy-intelligence">ResidentAI Home Energy Intelligence</a>
+        <a class="btn btn-outline" href="/capabilities">See our capabilities</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What we work on</h2>
+      <p class="prose text-muted">
+        Our work spans a small set of related disciplines. Not every idea
+        described below is a finished, commercially available product &mdash;
+        several are active research and development efforts, clearly marked
+        as such throughout this site.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Data &amp; analytics</h3>
+          <p>
+            Turning raw, scattered data into structured, trustworthy
+            information &mdash; with attention to data quality, freshness, and
+            provenance from the start.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Applied artificial intelligence</h3>
+          <p>
+            Building AI assistants and agent systems that reason over
+            real, governed data sources rather than static prompts &mdash;
+            with clear boundaries on what they can read, and what they
+            cannot act on.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Systems integration</h3>
+          <p>
+            Connecting APIs, local services, and operational systems so
+            information moves reliably between them, with authorization
+            and data quality treated as first-class concerns.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Energy intelligence</h3>
+          <p>
+            Combining solar, battery, and weather data into clear,
+            explainable summaries of how a home or system is actually
+            performing &mdash; the focus of our ResidentAI project.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Privacy-conscious local technology</h3>
+          <p>
+            A strong preference for local-first architecture, least-privilege
+            access, and keeping sensitive data close to its source rather
+            than centralizing it unnecessarily.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Current research &amp; development</h3>
+          <p>
+            Ongoing, hands-on experimentation with emerging AI and
+            automation techniques, applied to real systems rather than
+            theoretical exercises.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-surface">
+    <div class="container">
+      <p class="eyebrow">Featured project</p>
+      <h2>ResidentAI Home Energy Intelligence</h2>
+      <p class="prose text-muted">
+        A read-only, advisory pilot that combines home battery, solar,
+        weather, and smart-home data into clear, natural-language
+        explanations of home energy conditions &mdash; without taking control
+        of any connected system.
+      </p>
+      <a class="btn btn-primary" href="/projects/residentai-home-energy-intelligence">Learn about the project</a>
+    </div>
+  </section>
+</BaseLayout>

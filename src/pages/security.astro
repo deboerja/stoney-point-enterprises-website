@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Security and Data Practices";
+const description =
+  "Our intended security posture: least-privilege access, read-only API access wherever possible, encrypted transport, and clear separation between data acquisition and AI interpretation.";
+---
+
+<BaseLayout title={title} description={description} current="security">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Security &amp; Data Practices</p>
+      <h1>How we think about access and data handling.</h1>
+      <p class="lede">
+        This page describes the security posture that informs our work. It
+        is a statement of principles and intended practice, not a claim of
+        formal certification.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice-box">
+        <p>
+          We do not claim compliance with SOC 2, ISO 27001, NIST, HIPAA,
+          PCI, or any other formal certification standard. Our approach is
+          informed by least-privilege, defense-in-depth, and
+          secure-development principles.
+        </p>
+      </div>
+
+      <dl class="spec-list">
+        <dt>Least-privilege access</dt>
+        <dd>Systems and integrations are granted only the access they need for a specific, defined purpose &mdash; not broad or standing access by default.</dd>
+
+        <dt>Read-only API access whenever possible</dt>
+        <dd>Where a data source supports it, we prefer read-only credentials and scopes over write or control access, especially for pilot and advisory work.</dd>
+
+        <dt>Device-scoped access</dt>
+        <dd>Access is scoped to the specific devices or accounts required, rather than broader account- or organization-level permissions.</dd>
+
+        <dt>Encrypted transport</dt>
+        <dd>Data in transit between systems is handled over encrypted (HTTPS/TLS) connections.</dd>
+
+        <dt>Secrets excluded from source control</dt>
+        <dd>Credentials, tokens, and API keys are kept out of version-controlled source code and configuration files.</dd>
+
+        <dt>Credentials excluded from AI prompts and model context</dt>
+        <dd>Secrets are not passed into AI model prompts or conversational context &mdash; AI components read curated data, not raw credentials.</dd>
+
+        <dt>Separation between data acquisition and AI interpretation</dt>
+        <dd>Data collection and normalization are handled by dedicated, narrowly scoped components, separate from the AI components that interpret and explain that data.</dd>
+
+        <dt>Timestamp and data-freshness validation</dt>
+        <dd>Data is timestamped at collection and checked for freshness before being treated as current.</dd>
+
+        <dt>Stale-data detection</dt>
+        <dd>Stale, missing, or inconsistent data is flagged rather than silently presented as normal or current.</dd>
+
+        <dt>Audit logging</dt>
+        <dd>Significant data-access and automation events are logged for review.</dd>
+
+        <dt>Restricted access to local services</dt>
+        <dd>Local network services and infrastructure are not exposed more broadly than required for a given integration.</dd>
+
+        <dt>No sale of personal data</dt>
+        <dd>We do not sell personal data.</dd>
+
+        <dt>No advertising-data collection</dt>
+        <dd>We do not collect data for advertising purposes.</dd>
+
+        <dt>No redistribution of third-party telemetry without authorization</dt>
+        <dd>Data obtained from third-party systems (such as energy or weather providers) is not redistributed beyond its authorized use without permission.</dd>
+      </dl>
+    </div>
+  </section>
+</BaseLayout>

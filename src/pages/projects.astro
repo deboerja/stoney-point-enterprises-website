@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Projects";
+const description =
+  "An overview of Stoney Point Enterprises' active projects, principally ResidentAI -- a privately hosted, modular AI-assistant research and development platform.";
+---
+
+<BaseLayout title={title} description={description} current="projects">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Projects</p>
+      <h1>Active research and development.</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>ResidentAI</h2>
+      <p>
+        ResidentAI is a privately hosted, modular AI-assistant research and
+        development platform designed to integrate authorized data sources,
+        local services, automation systems, and specialized AI capabilities.
+        It is under active development.
+      </p>
+      <p>
+        ResidentAI is built around narrow, purpose-specific AI personas that
+        each operate within an explicit, documented authority boundary
+        &mdash; what they are allowed to read, and separately, what (if
+        anything) they are allowed to act on. Most capabilities are
+        read-only and advisory by design.
+      </p>
+      <p class="text-muted">
+        We keep this description high-level deliberately. We do not publish
+        internal credentials, internal hostnames, exact security topology,
+        private repositories, sensitive system architecture, personal data
+        sources, or control capabilities that have not been approved or
+        implemented.
+      </p>
+      <a class="btn btn-primary" href="/projects/residentai-home-energy-intelligence">ResidentAI Home Energy Intelligence &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>

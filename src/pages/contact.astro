@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Contact";
+const description = "Contact Stoney Point Enterprises for technology collaboration, API integration, energy-data research, and applied AI projects.";
+const email = "Jacob.Deboer@stoneypointenterprises.com";
+---
+
+<BaseLayout title={title} description={description} current="contact">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <p>
+        <strong>Jake DeBoer</strong><br />
+        Owner, Stoney Point Enterprises<br />
+        <a href={`mailto:${email}`}>{email}</a>
+      </p>
+
+      <p>We're glad to hear from you about:</p>
+      <ul>
+        <li>Technology collaboration</li>
+        <li>API integration</li>
+        <li>Energy-data research</li>
+        <li>Applied AI projects</li>
+      </ul>
+
+      <p class="text-muted">
+        We respond by email. We don't collect information through a web
+        form on this site &mdash; use the address above directly.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
