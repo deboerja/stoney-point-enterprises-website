@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About";
+const description =
+  "Stoney Point Enterprises is an independently owned technology and applied-research company focused on data integration, analytics, applied AI, and home and energy automation.";
+---
+
+<BaseLayout title={title} description={description} current="about">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h1>An independent technology and applied-research company.</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <p>
+        Stoney Point Enterprises is an independently owned technology and
+        applied-research company. We focus on practical, hands-on work
+        rather than abstract theory &mdash; building real integrations, real
+        data pipelines, and real AI-assisted tooling, and being direct
+        about which parts are finished and which are still in progress.
+      </p>
+
+      <h2>Focus areas</h2>
+      <ul>
+        <li><strong>Data integration</strong> &mdash; connecting disparate systems and APIs into a coherent, queryable picture.</li>
+        <li><strong>Business and operational analytics</strong> &mdash; turning operational data into decisions, not just dashboards.</li>
+        <li><strong>Artificial-intelligence assistants</strong> &mdash; agent systems that read governed data sources and explain what they find in plain language.</li>
+        <li><strong>Home and energy automation</strong> &mdash; connecting solar, battery, and smart-home systems into unified, explainable views.</li>
+        <li><strong>Secure local infrastructure</strong> &mdash; local-first architecture, least-privilege access, and careful handling of credentials and sensitive data.</li>
+        <li><strong>Practical experimentation with emerging technologies</strong> &mdash; testing new AI and automation techniques against real systems, not synthetic demos.</li>
+      </ul>
+
+      <div class="notice-box">
+        <p>
+          Some of what we describe on this site is an active development
+          project, not a finished, commercially available product. We try
+          to be explicit about that distinction wherever it matters &mdash;
+          see the <a href="/projects">Projects</a> page for the current
+          status of each effort.
+        </p>
+      </div>
+
+      <h2>Ownership</h2>
+      <p>
+        Jake DeBoer is the owner of Stoney Point Enterprises, an
+        independent company.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

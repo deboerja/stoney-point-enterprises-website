@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Capabilities";
+const description =
+  "Data analytics and visualization, API and systems integration, workflow automation, applied AI and agent systems, energy-data integration, and local-first architecture.";
+
+const capabilities = [
+  {
+    heading: "Data analytics and visualization",
+    body: "Structuring raw operational and sensor data into clear, queryable form, and presenting it in ways that support real decisions rather than vanity dashboards.",
+  },
+  {
+    heading: "API and systems integration",
+    body: "Connecting first- and third-party APIs, local network services, and automation platforms into a single coherent data flow, with authorization handled deliberately at each boundary.",
+  },
+  {
+    heading: "Workflow automation",
+    body: "Automating repetitive operational tasks with clear triggers, bounded scope, and visibility into what ran and why.",
+  },
+  {
+    heading: "Applied AI and agent systems",
+    body: "Designing AI assistants and agent workflows that reason over real, governed data sources, with explicit read/write boundaries and human approval where actions matter.",
+  },
+  {
+    heading: "Energy-data integration",
+    body: "Combining solar production, battery state, weather, and smart-home telemetry into a single, timestamped, explainable picture of energy conditions.",
+  },
+  {
+    heading: "Local-first and privacy-conscious architecture",
+    body: "Preferring local processing and storage over unnecessary cloud centralization, and treating credentials and sensitive data with least-privilege access by default.",
+  },
+  {
+    heading: "Monitoring, observability, and data-quality controls",
+    body: "Building in staleness detection, data-freshness validation, and audit logging from the start, so degraded or missing data is surfaced rather than silently treated as normal.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description} current="capabilities">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Capabilities</p>
+      <h1>What we build with.</h1>
+      <p class="lede">
+        General technical capabilities we apply across client and internal
+        projects. These describe how we work, not a list of completed
+        customer engagements or formal certifications.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        {
+          capabilities.map((c) => (
+            <div class="card">
+              <h3>{c.heading}</h3>
+              <p>{c.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

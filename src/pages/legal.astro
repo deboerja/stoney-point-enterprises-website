@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Legal and Trademark Notice";
+const description = "Third-party product names and trademarks referenced on this site belong to their respective owners. Their mention does not imply endorsement or affiliation.";
+---
+
+<BaseLayout title={title} description={description} current="">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Legal</p>
+      <h1>Legal and Trademark Notice</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <p>
+        Product and company names, logos, and brands referenced on this
+        site &mdash; including but not limited to FranklinWH and Enphase
+        &mdash; are trademarks or registered trademarks of their respective
+        owners. Their use on this site is for identification and
+        descriptive purposes only.
+      </p>
+      <p>
+        Mention of any third-party product, service, or company on this
+        site does not imply endorsement, sponsorship, partnership,
+        certification, or affiliation between Stoney Point Enterprises and
+        that company, unless explicitly and separately stated.
+      </p>
+      <p>
+        Stoney Point Enterprises is not a FranklinWH partner, Enphase
+        partner, certified installer, approved API developer, or
+        security-certified organization, and does not represent itself as
+        such.
+      </p>
+      <p>
+        This site is provided for general informational purposes. It does
+        not constitute a commercial offer, warranty, or guarantee of any
+        product or service.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

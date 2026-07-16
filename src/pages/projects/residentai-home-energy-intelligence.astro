@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "ResidentAI Home Energy Intelligence";
+const description =
+  "A read-only, advisory home-energy intelligence pilot combining FranklinWH battery telemetry, Enphase solar data, local weather, and Home Assistant state into clear, natural-language explanations.";
+---
+
+<BaseLayout title={title} description={description} current="projects">
+  <section class="hero section-dark section-tight">
+    <div class="container">
+      <p class="eyebrow">Project &middot; ResidentAI</p>
+      <h1>Home Energy Intelligence</h1>
+      <p class="lede">
+        A read-only home-energy intelligence pilot that combines battery,
+        solar, weather, and smart-home data into clear, natural-language
+        explanations of what a home's energy system is actually doing.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>What the pilot does</h2>
+      <p>
+        Stoney Point Enterprises is developing a read-only home-energy
+        intelligence pilot that combines:
+      </p>
+      <ul>
+        <li>FranklinWH battery and energy-flow telemetry</li>
+        <li>Enphase solar-production and inverter information</li>
+        <li>Local weather observations and forecasts</li>
+        <li>Home Assistant state data</li>
+        <li>ResidentAI analysis and natural-language explanations</li>
+      </ul>
+
+      <h2>Potential advisory functions</h2>
+      <p class="text-muted">
+        The pilot is intended to support functions such as:
+      </p>
+      <ul>
+        <li>Explaining current battery charging or discharging behavior</li>
+        <li>Comparing expected and actual solar production</li>
+        <li>Identifying unusual energy-flow patterns</li>
+        <li>Evaluating how cloud cover and weather affect solar output</li>
+        <li>Estimating battery readiness before severe weather</li>
+        <li>Detecting stale, unavailable, or inconsistent telemetry</li>
+        <li>Providing understandable summaries of home-energy conditions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-surface">
+    <div class="container">
+      <h2>High-level architecture</h2>
+      <p class="text-muted prose">
+        Data flows in one direction, from source systems to a normalized
+        data layer, through ResidentAI's analysis, to a homeowner-facing
+        explanation. No step in this diagram issues commands back to the
+        source systems.
+      </p>
+
+      <div class="arch-diagram" role="img" aria-label="Architecture diagram: FranklinWH data, Enphase data, weather data, and Home Assistant data flow into a normalized and timestamped energy-data service, which feeds ResidentAI, which produces homeowner-facing explanations and recommendations.">
+        <div class="arch-row">
+          <div class="arch-node">FranklinWH data</div>
+          <div class="arch-node">Enphase data</div>
+          <div class="arch-node">Weather data</div>
+          <div class="arch-node">Home Assistant data</div>
+        </div>
+        <div class="arch-arrow" aria-hidden="true">&darr;</div>
+        <div class="arch-row">
+          <div class="arch-node is-core is-full-width">Normalized and timestamped energy-data service</div>
+        </div>
+        <div class="arch-arrow" aria-hidden="true">&darr;</div>
+        <div class="arch-row">
+          <div class="arch-node is-core is-full-width">ResidentAI</div>
+        </div>
+        <div class="arch-arrow" aria-hidden="true">&darr;</div>
+        <div class="arch-row">
+          <div class="arch-node is-full-width">Homeowner-facing explanations and recommendations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Scope and limitations</h2>
+      <div class="notice-box">
+        <p><strong>The initial pilot is advisory and read-only.</strong></p>
+        <ul>
+          <li>It does not autonomously control the FranklinWH system.</li>
+          <li>It does not change battery modes.</li>
+          <li>It does not operate Smart Circuits.</li>
+          <li>It does not issue remote device commands.</li>
+        </ul>
+        <p>
+          Any future control capability would require separate
+          authorization, deterministic safeguards, explicit human approval,
+          and additional testing.
+        </p>
+      </div>
+
+      <h2>Trademark notice</h2>
+      <p class="text-muted">
+        FranklinWH and Enphase are trademarks of their respective owners.
+        Stoney Point Enterprises is not claiming partnership, certification,
+        endorsement, or affiliation with either company. See our full
+        <a href="/legal">Legal &amp; Trademark Notice</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
