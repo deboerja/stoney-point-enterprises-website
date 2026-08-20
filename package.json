@@ -17,12 +17,12 @@
     "astro": "^7.1.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.12.1",
-    "html-validate": "^10.9.0",
-    "lighthouse": "^12.8.2",
-    "linkinator": "^7.6.1",
-    "playwright": "^1.61.1",
-    "sharp": "^0.33.5"
+    "@axe-core/playwright": "^4.13.0",
+    "html-validate": "^11.7.0",
+    "lighthouse": "^13.4.1",
+    "linkinator": "^8.0.4",
+    "playwright": "^1.62.1",
+    "sharp": "^0.35.3"
   },
   "engines": {
     "node": ">=22.12.0"
