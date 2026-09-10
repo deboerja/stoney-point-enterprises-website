@@ -13,7 +13,7 @@
     "assets": "node scripts/generate-assets.mjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.1.0"
   },
   "devDependencies": {
